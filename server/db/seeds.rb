@@ -5,3 +5,39 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#creation des déclaration
+puts "creation des PVMES"
+PvmesDeclaration.create!(compagny_name: "1",
+                        compagny_siren: "111111",
+                        customer_name: "turcat",
+                        customer_email: "gturcat@me.com",
+                        customer_phone: "0613072416",
+                        adress: "788 ancienne route des Alpes 13100 Aix en Pce",
+                        date_of_installation: Date.today)
+
+PvmesDeclaration.create!(compagny_name: "2",
+                        compagny_siren: "222222",
+                        customer_name: "tacrut",
+                        customer_email: "gturcat@mac.com",
+                        customer_phone: "0613072424",
+                        adress: "792 route des Alpes 13100 Aix en Pce",
+                        date_of_installation: Date.today)
+
+puts "fin des création des PVMES"
+
+puts "creation des Panel"
+Panel.create!(hybrid: true,
+              code: "111111",
+              pvmes_declaration_id: PvmesDeclaration.first.id)
+Panel.create!(hybrid: true,
+              code: "222222",
+              pvmes_declaration_id: PvmesDeclaration.first.id)
+Panel.create!(hybrid: true,
+              code: "333333",
+              pvmes_declaration_id: PvmesDeclaration.last.id)
+Panel.create!(hybrid: true,
+              code: "444444",
+              pvmes_declaration_id: PvmesDeclaration.last.id)
+
+puts "fin des création des panels"
+

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+pvmes_declaration_1:
+  compagny_siren: "123456789"
+  compagny_name: "MyCompany"
+  adress: "123 Main St"
+  customer_name: "John Doe"
+  customer_email: "john@example.com"
+  customer_phone: "555-1234"
+
+pvmes_declaration_2:
+  compagny_siren: "987654321"
+  compagny_name: "YourCompany"
+  adress: "456 Elm St"
+  customer_name: "Jane Doe"
+  customer_email: "jane@example.com"
+  customer_phone: "555-5678"
