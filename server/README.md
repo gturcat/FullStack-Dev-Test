@@ -30,6 +30,7 @@ Run tests :
 rails t
 ```
 # curl
+* create a pvmes
 curl -X POST -H "Content-Type: application/json" -d '{
     "pvmes_declaration": {
         "compagny_name": "ACME Inc.",
@@ -48,4 +49,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     }
 }' http://localhost:3000/api/v1/pvmes_declarations
 
+* index pvmes
+curl -s 'http://localhost:3000/api/v1/pvmes_declarations/?customer_email=johndoe@example.com'
+
+* show pvmes
+curl -s 'http://localhost:3000/api/v1/pvmes_declarations/1'
 
