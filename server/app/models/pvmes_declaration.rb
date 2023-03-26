@@ -8,4 +8,17 @@ class PvmesDeclaration < ApplicationRecord
 
   has_many :panels
   accepts_nested_attributes_for :panels
+
+  #allow to filter the pvmes to review only the unchecked
+  enum status: { submited: 0, checked: 1 }
+
+  after_create :submited
+
+  private
+
+  #after creation, force the status to submited
+  def submited
+    self.submited!
+  end
+
 end

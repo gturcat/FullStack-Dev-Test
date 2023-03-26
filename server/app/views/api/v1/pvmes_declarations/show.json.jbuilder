@@ -4,7 +4,8 @@ json.extract! @pvmes_declaration, :compagny_name,
                                    :customer_name,
                                    :customer_email,
                                    :customer_phone,
-                                   :adress
+                                   :adress,
+                                   :status
 json.panels @pvmes_declaration.panels do |panel|
   json.extract! panel, :type_of_panel, :code
 end
