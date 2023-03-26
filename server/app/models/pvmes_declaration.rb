@@ -4,7 +4,9 @@ class PvmesDeclaration < ApplicationRecord
   validates :adress, presence: true
   validates :customer_name, presence: true
   validates :customer_email, presence: true
+  validates :customer_email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :customer_phone, presence: true
+
 
   has_many :panels
   accepts_nested_attributes_for :panels
