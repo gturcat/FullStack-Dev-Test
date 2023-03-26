@@ -29,3 +29,23 @@ Run tests :
 ```
 rails t
 ```
+# curl
+curl -X POST -H "Content-Type: application/json" -d '{
+    "pvmes_declaration": {
+        "compagny_name": "ACME Inc.",
+        "compagny_siren": "123456789",
+        "customer_name": "John Doe",
+        "customer_email": "johndoe@example.com",
+        "customer_phone": "555-555-5555",
+        "adress": "123 Main St",
+        "date_of_installation": "2022-03-26",
+        "panels_attributes": [
+            {
+                "type_of_panel": "solar",
+                "code": "1234"
+            }
+        ]
+    }
+}' http://localhost:3000/api/v1/pvmes_declarations
+
+
