@@ -1,0 +1,16 @@
+<p>Enregistrer votre PVMES</p>
+<form (ngSubmit)="onSubmitForm()">
+    <label for="compagnyNameInput">Nom de la société</label>
+    <input type="string" id="compagnyNameInput" name="compagnyName" [(ngModel)]="compagnyName">
+    <label for="compagnySirenInput">Siren</label>
+    <input type="string" id="compagnySirenInput">
+    <label for="customerNameInput">Nom du client</label>
+    <input type="string" id="customerNameInput">
+    <label for="customerEmailInput">email Client</label>
+    <input type="email" id="customerEmailInput">
+    <label for="customerPhoneInput">Tel client</label>
+    <input type="string" id="customerPhoneInput">
+    <label for="installlationDateInput">Date de l'installation</label>
+    <input type="date" id="installlationDateInput">
+    <button type="submit">OK!</button>
+</form>
