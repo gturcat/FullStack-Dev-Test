@@ -7,6 +7,6 @@ json.array! @pvmes_declarations do |pvmes_declaration|
                                    :customer_phone,
                                    :adress
   json.panels pvmes_declaration.panels do |panel|
-    json.extract! panel, :hybrid, :code
+    json.extract! panel, :type_of_panel, :code
   end
 end

@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  hybrid: false
+  type_of_panel: "hybrid"
   code: 111111
   pvmes_declaration_id: 1
 
 two:
-  hybrid: false
+  type_of_panel: "photovoltaic"
   code: 222222
   pvmes_declaration_id: 2

@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_25_143258) do
+ActiveRecord::Schema.define(version: 2023_03_26_120530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "panels", force: :cascade do |t|
-    t.boolean "hybrid"
     t.string "code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "pvmes_declaration_id", null: false
+    t.string "type_of_panel"
     t.index ["pvmes_declaration_id"], name: "index_panels_on_pvmes_declaration_id"
   end
 

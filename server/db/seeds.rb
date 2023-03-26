@@ -26,16 +26,16 @@ PvmesDeclaration.create!(compagny_name: "2",
 puts "fin des création des PVMES"
 
 puts "creation des Panel"
-Panel.create!(hybrid: true,
+Panel.create!(type_of_panel: "hybrid",
               code: "111111",
               pvmes_declaration_id: PvmesDeclaration.first.id)
-Panel.create!(hybrid: true,
+Panel.create!(type_of_panel: "hybrid",
               code: "222222",
               pvmes_declaration_id: PvmesDeclaration.first.id)
-Panel.create!(hybrid: true,
+Panel.create!(type_of_panel: "photovoltaic",
               code: "333333",
               pvmes_declaration_id: PvmesDeclaration.last.id)
-Panel.create!(hybrid: true,
+Panel.create!(type_of_panel: "photovoltaic",
               code: "444444",
               pvmes_declaration_id: PvmesDeclaration.last.id)
 

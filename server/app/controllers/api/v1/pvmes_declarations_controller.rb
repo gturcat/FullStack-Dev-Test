@@ -34,7 +34,7 @@ class Api::V1::PvmesDeclarationsController < Api::V1::BaseController
                   :adress,
                   :date_of_installation,
                   panels_attributes: [
-                    :hybrid,
+                    :type_of_panel,
                     :code
                   ]
                   )

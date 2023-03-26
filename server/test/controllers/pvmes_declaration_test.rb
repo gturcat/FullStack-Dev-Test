@@ -27,7 +27,7 @@ class Api::V1::PvmesDeclarationsControllerTest < ActionDispatch::IntegrationTest
         adress: @pvmes_declaration.adress,
         date_of_installation: @pvmes_declaration.date_of_installation,
         panels_attributes: [
-          hybrid: @pvmes_declaration.panels.first.hybrid,
+          type_of_panel: @pvmes_declaration.panels.first.type_of_panel,
           code: @pvmes_declaration.panels.first.code
         ]
       } }
@@ -44,8 +44,8 @@ class Api::V1::PvmesDeclarationsControllerTest < ActionDispatch::IntegrationTest
         adress: @pvmes_declaration.adress,
         date_of_installation: @pvmes_declaration.date_of_installation,
         panels_attributes: [
-          hybrid: @pvmes_declaration.panels.first&.hybrid,
-          code: @pvmes_declaration.panels.first&.code
+          type_of_panel: @pvmes_declaration.panels.first.type_of_panel,
+          code: @pvmes_declaration.panels.first.code
         ]
       } }
     assert_response :unprocessable_entity

@@ -28,6 +28,11 @@ class PanelTest < ActiveSupport::TestCase
     assert_includes @panel.errors[:code], 'is the wrong length (should be 6 characters)'
   end
 
+    test 'type_of_panel should be photovoltaic or hybrid' do
+    @panel.type_of_panel = 'invalid'
+    assert_not @panel.valid?
+  end
+
   test 'should belong to pvmes_declaration' do
     assert_instance_of PvmesDeclaration, @panel.pvmes_declaration
   end
